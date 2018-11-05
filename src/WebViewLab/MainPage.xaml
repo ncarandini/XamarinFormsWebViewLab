@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WebViewLab"
+             x:Class="WebViewLab.MainPage">
+
+    <Grid VerticalOptions="FillAndExpand"
+          HorizontalOptions="FillAndExpand"
+          RowSpacing="0" ColumnSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Welcome to the Xamarin Forms WebView Lab" Margin="40" />
+
+        <Button Grid.Row="1"
+                Margin="0,0,0,40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Regular WebView"
+                Clicked="RegularWebViewButtonClicked" />
+
+        <Button Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="Extended WebView"
+                Clicked="ExtendedWebViewButtonClicked" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewLab.WebViewPage">
+    
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              RowSpacing="0" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"
+                         Padding="0" Spacing="0"
+                         Margin="8"
+                         HorizontalOptions="Fill"
+                         Orientation="Horizontal">
+
+                <Entry x:Name="UrlEntry"
+                   Text="https://www.microsoft.com"
+                   HorizontalOptions="FillAndExpand" />
+
+                <Button Text="Go" Clicked="NavigateButtonClicked" />
+            </StackLayout>
+
+            <WebView x:Name="RegularWebView"
+                     Grid.Row="1"
+                     Navigating="OnUrlNavigating"
+                     Navigated="OnUrlNavigated" />
+
+            <Label x:Name="LoadingLabel"
+                   Grid.Row="2"
+                   Text="Loading..."
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   IsVisible="false" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

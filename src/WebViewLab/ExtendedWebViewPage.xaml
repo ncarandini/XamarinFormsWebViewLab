@@ -22,8 +22,8 @@
                          Orientation="Horizontal">
 
                 <Entry x:Name="UrlEntry"
-                   Text="https://www.microsoft.com"
-                   HorizontalOptions="FillAndExpand" />
+                       Text="{StaticResource StartUrl}"
+                       HorizontalOptions="FillAndExpand" />
 
                 <Button Text="Go" Clicked="NavigateButtonClicked" />
             </StackLayout>

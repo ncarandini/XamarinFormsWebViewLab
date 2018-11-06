@@ -17,7 +17,6 @@ namespace WebViewLab
 		{
 			InitializeComponent ();
             Title = "Extended WebView";
-            // NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void NavigateButtonClicked(object sender, EventArgs e)
